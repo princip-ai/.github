@@ -124,4 +124,3 @@ This policy aligns with tools like **commitlint** and **semantic-release** for:
 - Use the correct type and scope for clarity.
 
 By following this policy, we maintain a clean and structured commit history that benefits everyone!
-```
