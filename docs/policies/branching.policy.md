@@ -112,7 +112,7 @@ All branches must follow this naming pattern:
   ```bash
   git pull origin {target-branch}
   ```
-- Follow the [Commit Message Policy](/docs/commit.policy.md).
+- Follow the [Commit Message Policy](/docs/policies/commit.policy.md).
 - Use descriptive PR titles and link related issues.
 - Request a review from the appropriate team members.
 
