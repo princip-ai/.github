@@ -9,7 +9,7 @@ This document outlines the commit message style guide for our organization, base
 Each commit message should follow this structure:
 
 ```text
-<type>(<scope>): <short description>
+<type>(<taskId>): <short description>
 
 <body>
 
@@ -25,35 +25,25 @@ The type indicates the purpose of the commit. Use one of the following:
 
 | Type       | Meaning                                      | Example                   |
 |------------|----------------------------------------------|---------------------------|
-| **feat**   | A new feature                                | `feat(auth): add login`   |
-| **fix**    | A bug fix                                    | `fix(ui): resolve button issue` |
+| **feat**   | A new feature                                | `feat(taskId): add login`   |
+| **fix**    | A bug fix                                    | `fix(taskId): resolve button issue` |
 | **chore**  | Miscellaneous tasks or maintenance work      | `chore: update dependencies` |
-| **docs**   | Documentation updates or changes             | `docs(readme): update usage section` |
-| **style**  | Code style changes (formatting, no logic)    | `style(css): update navbar styles` |
-| **refactor** | Code refactoring without functional changes | `refactor(api): optimize query` |
-| **test**   | Adding or modifying tests                   | `test(auth): add unit tests` |
-| **perf**   | Performance improvements                    | `perf(query): optimize DB query` |
-| **build**  | Changes to build scripts or CI configuration | `build: update Dockerfile` |
+| **docs**   | Documentation updates or changes             | `docs(taskId): update usage section` |
+| **style**  | Code style changes (formatting, no logic)    | `style(taskId): update navbar styles` |
+| **refactor** | Code refactoring without functional changes | `refactor(taskId): optimize query` |
+| **test**   | Adding or modifying tests                   | `test(taskId): add unit tests` |
 | **ci**     | Continuous integration changes              | `ci: update GitHub Actions` |
-
----
-
-### 🧭 **Scope**
-The scope specifies the area of the codebase affected. For example:
-- `auth`, `ui`, `api`, `db`, `docs`.
-
-If the commit applies to multiple areas or the entire project, you may omit the scope.
 
 ---
 
 ### ✍️ **Short Description**
 - Use an **imperative tone** (e.g., "add", "update", "fix").
-- Keep it **concise** (50 characters max).
+- Keep it **concise** (72 characters max).
 - Start with a lowercase letter (unless it's a proper noun).
 
 Example:
 ```text
-fix(api): handle missing user ID in response
+fix(DEV-2210): handle missing user ID in response
 ```
 
 ---
@@ -66,7 +56,7 @@ The body provides more detailed information about the changes. It should:
 
 Example 1:
 ```text
-feat(auth): add OAuth2 support
+feat(DEV-2210): add OAuth2 support
 
 This feature allows users to log in using OAuth2. It includes
 support for Google and Facebook authentication providers.
@@ -74,7 +64,7 @@ support for Google and Facebook authentication providers.
 
 Example 2:
 ```text
-feat(auth): refactor OAuth
+feat(DEV-2211): refactor OAuth
 
 - Added feature flag for restrinction
 - Added logic layer for authentication process
@@ -84,7 +74,7 @@ feat(auth): refactor OAuth
 
 ### 📝 **Footer (Optional)**
 Include additional metadata such as:
-- Links to related issues or tickets (`#123`, `ABC-456`).
+- Links to related issues or tickets (`DEV-2210`).
 - **BREAKING CHANGE**: Describe any backward-incompatible changes.
 
 Example:
@@ -97,11 +87,11 @@ BREAKING CHANGE: The auth module now requires an OAuth2 secret key.
 ## 🌟 **Examples**
 
 ### ✅ Good Commit Messages
-- `feat(ui): add dark mode toggle`
-- `fix(auth): handle token expiration`
-- `docs(readme): add contributing section`
+- `feat(taskId): add dark mode toggle`
+- `fix(taskId): handle token expiration`
+- `docs(taskId): add contributing section`
 - `chore: update project dependencies`
-- `refactor(api): optimize user query`
+- `refactor(taskId): optimize user query`
 
 ### ❌ Bad Commit Messages
 - `update code` (Too vague)
