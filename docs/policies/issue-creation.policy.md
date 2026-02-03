@@ -16,6 +16,7 @@ Epic
  └── Story
       └── Sub-task
  └── Task
+ └── Bug
 ```
 
 Each level has a **clear responsibility and scope**.
